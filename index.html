@@ -18,6 +18,7 @@
 
     <main class="container">
 
+        <!-- Controls -->
         <section class="controls">
 
             <h2>Create your QR code</h2>
@@ -29,15 +30,32 @@
                 placeholder="https://example.com"
             ></textarea>
 
-            <div class="color-control">
-                <label for="qrColor">QR Code Color</label>
 
-                <input
-                    type="color"
-                    id="qrColor"
-                    value="#000000"
-                >
+            <!-- QR COLOR -->
+            <div class="color-section">
+
+                <label>QR Code Color</label>
+
+                <div class="color-picker-row">
+
+                    <input
+                        type="color"
+                        id="qrColorPicker"
+                        value="#000000"
+                    >
+
+                    <input
+                        type="text"
+                        id="qrColorHex"
+                        value="#000000"
+                        maxlength="7"
+                        placeholder="#000000"
+                    >
+
+                </div>
+
             </div>
+
 
             <button id="generateBtn">
                 Generate QR Code
@@ -46,6 +64,7 @@
         </section>
 
 
+        <!-- Preview -->
         <section class="preview">
 
             <h2>Preview</h2>
@@ -63,6 +82,7 @@
     </main>
 
 
+    <!-- QR Code Library -->
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 
     <script src="script.js"></script>
