@@ -13,49 +13,25 @@
 
     <header>
         <h1>QR Code Generator</h1>
-        <p>Create and customize your QR code for free.</p>
+        <p>Create your QR code for free.</p>
     </header>
+
 
     <main class="container">
 
-        <!-- Controls -->
+        <!-- QR Generator Controls -->
         <section class="controls">
 
             <h2>Create your QR code</h2>
 
-            <label for="qrText">Enter text or URL</label>
+            <label for="qrText">
+                Enter text or URL
+            </label>
 
             <textarea
                 id="qrText"
                 placeholder="https://example.com"
             ></textarea>
-
-
-            <!-- QR COLOR -->
-            <div class="color-section">
-
-                <label>QR Code Color</label>
-
-                <div class="color-picker-row">
-
-                    <input
-                        type="color"
-                        id="qrColorPicker"
-                        value="#000000"
-                    >
-
-                    <input
-                        type="text"
-                        id="qrColorHex"
-                        value="#000000"
-                        maxlength="7"
-                        placeholder="#000000"
-                    >
-
-                </div>
-
-            </div>
-
 
             <button id="generateBtn">
                 Generate QR Code
@@ -64,7 +40,7 @@
         </section>
 
 
-        <!-- Preview -->
+        <!-- QR Preview -->
         <section class="preview">
 
             <h2>Preview</h2>
@@ -85,6 +61,7 @@
     <!-- QR Code Library -->
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 
+    <!-- Our JavaScript -->
     <script src="script.js"></script>
 
 </body>
