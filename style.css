@@ -11,6 +11,9 @@ body {
     min-height: 100vh;
 }
 
+
+/* HEADER */
+
 header {
     text-align: center;
     padding: 50px 20px 30px;
@@ -26,6 +29,9 @@ header p {
     font-size: 17px;
 }
 
+
+/* MAIN CONTAINER */
+
 .container {
     width: 90%;
     max-width: 1000px;
@@ -36,11 +42,17 @@ header p {
     gap: 30px;
 }
 
+
+/* CARDS */
+
 .controls,
 .preview {
     background: white;
+
     padding: 30px;
+
     border-radius: 15px;
+
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -48,11 +60,19 @@ h2 {
     margin-bottom: 25px;
 }
 
+
+/* LABEL */
+
 label {
     display: block;
+
     margin-bottom: 10px;
+
     font-weight: bold;
 }
+
+
+/* TEXTAREA */
 
 textarea {
     width: 100%;
@@ -61,28 +81,84 @@ textarea {
     padding: 15px;
 
     border: 1px solid #d1d5db;
+
     border-radius: 10px;
 
     resize: vertical;
 
     font-size: 16px;
+
+    outline: none;
 }
 
-.color-control {
-    margin-top: 20px;
+textarea:focus {
+    border-color: #2563eb;
 }
 
-.color-control input {
-    width: 60px;
-    height: 40px;
 
-    border: none;
+/* COLOR SECTION */
+
+.color-section {
+    margin-top: 25px;
+}
+
+
+/* COLOR PICKER ROW */
+
+.color-picker-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* COLOR BOX */
+
+#qrColorPicker {
+    width: 55px;
+    height: 45px;
+
     padding: 0;
 
-    cursor: pointer;
+    border: 2px solid #d1d5db;
 
-    background: transparent;
+    border-radius: 8px;
+
+    background: white;
+
+    cursor: pointer;
 }
+
+
+/* HEX INPUT */
+
+#qrColorHex {
+    width: 130px;
+    height: 45px;
+
+    padding: 0 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-family: monospace;
+
+    text-transform: uppercase;
+
+    outline: none;
+}
+
+#qrColorHex:focus {
+    border-color: #2563eb;
+}
+
+
+/* BUTTON */
 
 button {
     width: 100%;
@@ -92,12 +168,15 @@ button {
     padding: 14px;
 
     border: none;
+
     border-radius: 10px;
 
     background: #2563eb;
+
     color: white;
 
     font-size: 16px;
+
     font-weight: bold;
 
     cursor: pointer;
@@ -109,17 +188,24 @@ button:hover {
 
 button:disabled {
     background: #9ca3af;
+
     cursor: not-allowed;
 }
+
+
+/* QR PREVIEW */
 
 #qrContainer {
     min-height: 280px;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     border: 2px dashed #d1d5db;
+
     border-radius: 10px;
 
     padding: 20px;
@@ -131,6 +217,9 @@ button:disabled {
     max-width: 100%;
 }
 
+
+/* MOBILE */
+
 @media (max-width: 700px) {
 
     .container {
@@ -139,5 +228,9 @@ button:disabled {
 
     header h1 {
         font-size: 30px;
+    }
+
+    .color-picker-row {
+        flex-wrap: wrap;
     }
 }
