@@ -1,4 +1,5 @@
 const qrText = document.getElementById("qrText");
+const qrColor = document.getElementById("qrColor");
 const generateBtn = document.getElementById("generateBtn");
 const downloadBtn = document.getElementById("downloadBtn");
 const qrContainer = document.getElementById("qrContainer");
@@ -15,19 +16,23 @@ generateBtn.addEventListener("click", function () {
         return;
     }
 
-    // Remove previous QR code
+    // Remove the previous QR code
     qrContainer.innerHTML = "";
 
-    // Create new QR code
+    // Create the QR code
     qrCode = new QRCode(qrContainer, {
         text: text,
+
         width: 250,
         height: 250,
-        colorDark: "#000000",
+
+        colorDark: qrColor.value,
         colorLight: "#ffffff",
+
         correctLevel: QRCode.CorrectLevel.H
     });
 
+    // Enable download button
     downloadBtn.disabled = false;
 });
 
